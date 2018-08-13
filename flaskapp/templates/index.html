@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta name="description" content="">
+   <meta name="author" content="">
+
+   <!-- Hernan Title -->
+   <title>ApplaudMe</title>
+
+   <!-- Bootstrap core CSS -->
+   <link href="../static/css/bootstrap.min.css" rel="stylesheet">
+
+   <!-- Custom styles for this template -->
+   <link href="../static/css/starter-template.css" rel="stylesheet">
+
+ </head>
+
+ <style>
+   .container-fluid { 
+        background-color: #10053b; /* Blue */
+        color: #FFFFFF;
+   }
+ </style>
+
+ <body>
+    <!-- Navigation Menu - Home, About, Contact -->   
+   <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+     <div class="container">
+       <div class="navbar-header">
+         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+           <span class="sr-only">Toggle navigation</span>
+           <span class="icon-bar"></span>
+           <span class="icon-bar"></span>
+         </button>
+        <!-- Hernan Home -->
+         <a class="navbar-brand" href="/">ApplaudMe Home</a>
+       </div>
+       <div class="collapse navbar-collapse">
+         <ul class="nav navbar-nav">
+           <li class="active"><a href="/">Home</a></li>
+           <li><a href="/about">About</a></li>
+           <li><a href="/contact">Contact</a></li>
+         </ul>
+       </div><!--/.nav-collapse -->
+     </div>
+   </div>
+
+<!-- Hernan Background -->
+<style>
+.container-fluid { 
+    background-color: #10053b; /* Blue */
+    color: #FFFFFF;
+}
+</style>
+
+
+  <div class="container-fluid">
+    <h4>Please enter your Medium article features:</h4> 
+    <form action="/result" method="POST">
+    <div class="row">
+      <div class="col-sm-2">Enter title</div>
+      <div class="col-sm-8">
+          <input class="form-control input-sm" name="article_title" id="article_title" type="text" value={{article_title}}> 
+      </div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col-sm-2">Enter subtitle</div>
+      <div class="col-sm-8">
+          <input class="form-control input-sm" name="article_subtitle" id="article_subtitle" type="text" value={{article_subtitle}}>
+      </div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col-sm-2">Select publication followers</div>
+      <div class="col-sm-2">  
+          <select class="form-control input-sm" name="publication_followers" id="publication_followers">
+            <option>0</option>
+            <option>10</option>
+            <option>100</option>
+            <option>1000</option>
+            <option>10000</option>
+            <option>100000</option>
+          </select>
+        </div>         
+      <div class="col-sm-2">Select number of images</div>
+      <div class="col-sm-1">  
+          <select class="form-control input-sm" name="image_count" id="image_count">
+            <option>0</option>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
+            <option>7</option>
+            <option>8</option>
+            <option>9</option>
+            <option>10</option>
+            <option>11</option>
+          </select>
+      </div>         
+      <div class="col-sm-2">Select number of links</div>
+      <div class="col-sm-1">  
+          <select class="form-control input-sm" name="link_count" id="link_count">
+            <option>0</option>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
+            <option>7</option>
+          </select>
+      </div>         
+    </div> <!--row-->
+    <br>
+    <div class="form-group">
+        <label for="textContent">Enter your article text and some features</label>
+        <textarea class = "form-control" name="text_Content" rows = "10" id="textContent"> {{article_text}}
+        </textarea>
+    </div>
+      <!-- Request the URL -->
+          <button type="submit" class="btn btn-primary">ApplaudMe</button>
+    </form>
+
+  <div class="container text-center">
+			<p>{{message}}</p>
+  </div>
+  
+
+
+    </div><!-- /.container -->    
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../static/js/bootstrap.min.js"></script>
+  
+  </body>
+</html>

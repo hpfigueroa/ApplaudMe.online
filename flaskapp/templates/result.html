@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta name="description" content="">
+   <meta name="author" content="">
+   <link rel="icon" href="../../favicon.ico">
+
+   <!-- Hernan Title -->
+   <title>ApplaudMe</title>
+
+   <!-- Bootstrap core CSS -->
+   <link href="../static/css/bootstrap.min.css" rel="stylesheet">
+
+   <!-- Custom styles for this template -->
+   <link href="../static/css/starter-template.css" rel="stylesheet">
+
+ </head>
+
+ <style>
+   .container-fluid { 
+        background-color: #10053b; /* Blue */
+        color: #FFFFFF;
+   }
+ </style>
+
+ <body>
+    <!-- Navigation Menu - Home, About, Contact -->   
+   <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+     <div class="container">
+       <div class="navbar-header">
+         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+           <span class="sr-only">Toggle navigation</span>
+           <span class="icon-bar"></span>
+           <span class="icon-bar"></span>
+         </button>
+        <!-- Hernan Home -->
+         <a class="navbar-brand" href="/">ApplaudMe Home</a>
+       </div>
+       <div class="collapse navbar-collapse">
+         <ul class="nav navbar-nav">
+           <li class="active"><a href="/">Home</a></li>
+           <li><a href="/about">About</a></li>
+           <li><a href="/contact">Contact</a></li>
+         </ul>
+       </div><!--/.nav-collapse -->
+     </div>
+   </div>
+
+    <!-- article_title, color_choice, probability, message, topic, image_location-->
+
+    <div class="container-fluid" align="center">
+        <br><br>
+        <div>
+        <br>
+        <h4> Your article: </h4>
+        <h3> {{article_title}}</a></h3>
+        <h2><font color={{color_choice}}>has a {{probability}}% chance of being in the top 20% quantile in your predicted topic.</font></h2>
+        <br>
+        <h5>{{message}}</h5>
+        <br>
+        <hr>
+        <br>
+     </div>
+
+
+     <div align="left">
+      <!--<p> We believe your article could be in topic: {{topic}} </p>-->
+      <p> ApplaudMe identified features that writers can change in their articles to increase your chances of success and meet an applause target.</p>
+      <p> Your article is given <i>weighted scores</i> to reflect how effectively it utilizes each feature. </p>
+      <p> The chart below displays these scores for <font color="CB3335"><strong>your article</font></strong> compared to <font color="#477CA8"><strong>20% of the top articles in 2018</strong></font> in your predicted topic.</p>
+
+      <img src={{image_location}} alt="Nature" style="width:80%"><br>
+
+      <p> ApplaudMe identified the you can improve your article chances of success by changing the following features: </p>
+      
+      <div align="left">
+        <h5>What do these features mean?</h5>
+        <p> Publication following is the number of followers the publication your selecte publication features. </p>
+        <p> Using <strong>about 10 images</strong> helps create a vivid and more readable article. </p>
+        <p> Aim for an article that can be read in 5 minutes, too short content will not engage the user enough, while too long content may loose engagement after 1000 words </p>
+        <br>
+
+      <h4>General tips from our analysis:</h4>             
+     
+      	<p>In addition, ApplaudMe found these general tips to increase your probability of success:</p>
+        <ul align="left">
+          <li><strong>If possible, write for a middle school audience!</strong> The readability of your text is an important factor for achieving success. Although certain topics, such as machine learning, need to use technical terms, an 11-15 year old should be able to read and understand the way to describe those terms.</li>
+          <li>Try to <strong>link your post</strong> to other sources to increase its visibility.</li>
+          <li>End your article with a <strong>call to action</strong>&mdash;ask the reader to try this new approach or write a comment or discuss the topic with family and friends. Calls to action are used by top articles and invite readers to engage with your content.</li>
+          <li>Post (or re-post) your article on <strong>Saturdays</strong>. ApplaudMe found that posts that are published on Saturdays (and sometimes Sundays) have a higher probability of success. These articles also face less competition, because typically, writers post 20-30% articles during weekends.</li>
+        </ul>
+      	
+        <h3 align="center">Happy Writing!</h3>
+      </div>
+
+    </div><!-- /.container -->    
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="static/js/bootstrap.min.js"></script>
+  
+  </body>
+</html>
